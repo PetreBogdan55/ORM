@@ -2,7 +2,7 @@ package com.example.tpd_server.data_access;
 
 import com.example.tpd_server.models.Motorcycle;
 import com.example.tpd_server.models.User;
-import com.example.connection_package.ConnectionHelper;
+//import com.example.connection_package.ConnectionHelper;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

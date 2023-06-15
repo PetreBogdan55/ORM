@@ -3,9 +3,9 @@ package com.example.tpd_server.data_access;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-/*
+
 public final class ConnectionHelper {
-    private static final String url = "jdbc:postgresql://34.116.151.224:5432/postgres?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=tema-orm:europe-central2:tema-orm-db&user=postgres&password=postgres";
+    private static final String url = "jdbc:postgresql://34.77.61.51:5432/postgres?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=unified-firefly-389410:europe-west1:postgres&user=postgres&password=postgres";
 
     public static Connection getConnection() {
         Connection connection = null;
@@ -19,4 +19,3 @@ public final class ConnectionHelper {
     }
 }
 
- */
