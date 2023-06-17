@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public final class ConnectionHelper {
-    private static final String url = "jdbc:postgresql://34.118.52.239:5432/postgres?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=unified-firefly-389410:europe-central2:postgres&user=postgres&password=postgres";
+    private static final String url = "jdbc:postgresql://34.116.159.52:5432/postgres?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=valued-road-390109:europe-central2:postgres&user=postgres&password=postgres";
 
     public static Connection getConnection() {
         Connection connection = null;
