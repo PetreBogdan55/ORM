@@ -38,6 +38,7 @@ a{
 }
 
 .blue-button{
+    width: 100px;
     margin-left: 5vw;
     align-items: center;
     appearance: none;
@@ -69,7 +70,7 @@ a{
     font-size: 18px;
 }
 
-.motorcycle-list{
+.books-list{
     display:flex;
     justify-content: center;
     align-items: center;

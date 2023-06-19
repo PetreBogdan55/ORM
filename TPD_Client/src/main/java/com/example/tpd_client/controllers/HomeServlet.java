@@ -1,16 +1,12 @@
 package com.example.tpd_client.controllers;
 
-import com.example.tpd_client.data_access.MotorcycleDAO;
-import com.example.tpd_client.data_access.UserMotorcycleDAO;
-import com.example.tpd_client.models.User;
-import com.example.tpd_client.models.UserMotorcycle;
+import com.example.tpd_client.data_access.UserBookDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import java.awt.*;
 import java.io.IOException;
 
 @WebServlet(name = "homeServlet", value = "/home")
@@ -33,7 +29,7 @@ public class HomeServlet extends HttpServlet {
         int userId = Integer.parseInt(req.getSession().getAttribute("userId").toString());
         int motorcycleId = Integer.parseInt(req.getParameter("delete"));
         try {
-            UserMotorcycleDAO.delete(userId, motorcycleId);
+            UserBookDAO.delete(userId, motorcycleId);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -45,8 +41,8 @@ public class HomeServlet extends HttpServlet {
         String button = req.getParameter("button");
         if (button.equals("logout")) {
             resp.sendRedirect(req.getContextPath() + "/login");
-        } else if (button.equals("manage-motorcycles")) {
-            resp.sendRedirect(req.getContextPath() + "/manage-motorcycles");
+        } else if (button.equals("manage-books")) {
+            resp.sendRedirect(req.getContextPath() + "/manage-books");
         }
     }
 }

@@ -31,7 +31,7 @@ public final class UserDAO {
 
     public static User get(String username, String password) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/users/" + username + "/" + password))
+                .uri(URI.create("http://34.116.174.31:8080/user-service/api/users/" + username + "/" + password))
                 .header("Accept", "application/json")
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -49,7 +49,7 @@ public final class UserDAO {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(user);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/TPD_Server-1.0-SNAPSHOT/api/users"))
+                .uri(URI.create("http://34.116.174.31:8080/user-service/api/users/"))
                 .POST(HttpRequest.BodyPublishers.ofString(json))
                 .header("Accept", "application/json")
                 .build();
