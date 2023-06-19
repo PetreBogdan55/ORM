@@ -1,7 +1,7 @@
 package com.example.tpd_server.data_access;
 
 //import com.example.connection_package.ConnectionHelper;
-import com.example.tpd_server.models.Motorcycle;
+import com.example.tpd_server.models.Book;
 import com.example.tpd_server.models.UserMotorcycle;
 
 import java.sql.Connection;
@@ -35,11 +35,11 @@ public class UserMotorcycleDAO {
         }
         return result;
     }
-    public static List<Motorcycle> getMotorcyclesForUser(int userId){
+    public static List<Book> getMotorcyclesForUser(int userId){
         List<UserMotorcycle> ownedMotorcycles = UserMotorcycleDAO.getAll().stream().filter(userMotorcycle -> userMotorcycle.getUserId() == userId).collect(Collectors.toList());
-        List<Motorcycle> motorcycles = new ArrayList<>();
+        List<Book> motorcycles = new ArrayList<>();
         for(UserMotorcycle userMotorcycle: ownedMotorcycles){
-           motorcycles.add(MotorcycleDAO.get(userMotorcycle.getMotorcycleId()));
+           motorcycles.add(BookDAO.get(userMotorcycle.getMotorcycleId()));
         }
 
         return motorcycles;

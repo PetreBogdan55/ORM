@@ -1,10 +1,7 @@
 package com.example.tpd_server.services;
 
-import com.example.tpd_server.data_access.MotorcycleDAO;
-import com.example.tpd_server.data_access.UserDAO;
 import com.example.tpd_server.data_access.UserMotorcycleDAO;
-import com.example.tpd_server.models.Motorcycle;
-import com.example.tpd_server.models.User;
+import com.example.tpd_server.models.Book;
 import com.example.tpd_server.models.UserMotorcycle;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -18,7 +15,7 @@ public class UserMotorcycleService {
         return UserMotorcycleDAO.getAll();
     }
 
-    public List<Motorcycle> getMotorcyclesForUser(int userId) {
+    public List<Book> getMotorcyclesForUser(int userId) {
         if(userId < 0){
             return null;
         }

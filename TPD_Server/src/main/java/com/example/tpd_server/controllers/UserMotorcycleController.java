@@ -1,13 +1,10 @@
 package com.example.tpd_server.controllers;
 
-import com.example.tpd_server.models.Motorcycle;
-import com.example.tpd_server.models.User;
+import com.example.tpd_server.models.Book;
 import com.example.tpd_server.models.UserMotorcycle;
 import com.example.tpd_server.services.UserMotorcycleService;
-import com.example.tpd_server.services.UserService;
 import jakarta.ws.rs.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Path("/user-motorcycles")
@@ -23,7 +20,7 @@ public class UserMotorcycleController {
     @GET
     @Produces("application/json")
     @Path("/{userId}")
-    public List<Motorcycle> getMotorcyclesForUser(@PathParam("userId") int userId) {
+    public List<Book> getMotorcyclesForUser(@PathParam("userId") int userId) {
         return userMotorcycleService.getMotorcyclesForUser(userId);
     }
 
