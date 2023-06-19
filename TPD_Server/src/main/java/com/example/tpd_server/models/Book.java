@@ -22,12 +22,10 @@ public class Book implements BookInterface, Serializable {
         this.year = year;
     }
 
-    @Override
     public int getId() {
         return id;
     }
 
-    @Override
     public void setId(int id) {
         this.id = id;
     }
